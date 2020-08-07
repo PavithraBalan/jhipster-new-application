@@ -1,0 +1,24 @@
+{
+  "jhipsterNewApplicationApp": {
+    "notice": {
+      "home": {
+        "title": "Notices",
+        "createLabel": "Create a new Notice",
+        "createOrEditLabel": "Create or edit a Notice",
+        "notFound": "No Notices found"
+      },
+      "created": "A new Notice is created with identifier {{ param }}",
+      "updated": "A Notice is updated with identifier {{ param }}",
+      "deleted": "A Notice is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Notice {{ id }}?"
+      },
+      "detail": {
+        "title": "Notice"
+      },
+      "title": "Title",
+      "description": "Description",
+      "author": "Author"
+    }
+  }
+}

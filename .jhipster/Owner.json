@@ -9,14 +9,7 @@
       ]
     }
   ],
-  "relationships": [
-    {
-      "relationshipType": "one-to-many",
-      "otherEntityName": "pet",
-      "otherEntityRelationshipName": "owner",
-      "relationshipName": "pet"
-    }
-  ],
+  "relationships": [],
   "changelogDate": "20200807064204",
   "entityTableName": "owner",
   "dto": "no",

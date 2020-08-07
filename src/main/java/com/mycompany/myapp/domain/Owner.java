@@ -7,8 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * A Owner.
@@ -27,10 +25,6 @@ public class Owner implements Serializable {
     @NotNull
     @Column(name = "name", nullable = false)
     private String name;
-
-    @OneToMany(mappedBy = "owner")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Set<Pet> pets = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -52,31 +46,6 @@ public class Owner implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Set<Pet> getPets() {
-        return pets;
-    }
-
-    public Owner pets(Set<Pet> pets) {
-        this.pets = pets;
-        return this;
-    }
-
-    public Owner addPet(Pet pet) {
-        this.pets.add(pet);
-        pet.setOwner(this);
-        return this;
-    }
-
-    public Owner removePet(Pet pet) {
-        this.pets.remove(pet);
-        pet.setOwner(null);
-        return this;
-    }
-
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 

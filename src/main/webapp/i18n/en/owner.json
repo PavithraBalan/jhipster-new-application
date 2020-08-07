@@ -16,8 +16,7 @@
       "detail": {
         "title": "Owner"
       },
-      "name": "Name",
-      "pet": "Pet"
+      "name": "Name"
     }
   }
 }

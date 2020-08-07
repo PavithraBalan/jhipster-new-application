@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pet">
+            <h2><span jhiTranslate="jhipsterNewApplicationApp.pet.detail.title">Pet</span> {{ pet.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterNewApplicationApp.pet.name">Name</span></dt>
+                <dd>
+                    <span>{{ pet.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterNewApplicationApp.pet.species">Species</span></dt>
+                <dd>
+                    <span>{{ pet.species }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterNewApplicationApp.pet.owner">Owner</span></dt>
+                <dd>
+                    <div *ngIf="pet.owner">
+                        <a [routerLink]="['/owner', pet.owner?.id, 'view']">{{ pet.owner?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pet', pet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
